@@ -7,6 +7,8 @@ import {
   FaTwitter,
   FaInstagram,
 } from "react-icons/fa";
+import QZone from "../QZone/QZone";
+import bg from "../../../assets/bg.png";
 
 const RightNav = () => {
   return (
@@ -22,15 +24,29 @@ const RightNav = () => {
         <h4>Find Us On</h4>
         <ListGroup>
           <ListGroup.Item>
-            <FaFacebook /> Facebook
+            <FaFacebook className="text-primary" /> Facebook
           </ListGroup.Item>
           <ListGroup.Item>
-            <FaTwitter /> Twitter
+            <FaTwitter className="text-info" /> Twitter
           </ListGroup.Item>
           <ListGroup.Item>
-            <FaInstagram /> Instagram
+            <FaInstagram className="text-danger" /> Instagram
           </ListGroup.Item>
         </ListGroup>
+      </div>
+      <QZone></QZone>
+      <div className="position-relative">
+        <img className="w-100" src={bg} alt="" />
+        <div className="text-center position-absolute text-white top-50 start-50 translate-middle">
+          <h2 className="mb-3 fw-bold">Create an Amazing Newspaper</h2>
+          <p className="mb-4">
+            Discover thousands of options, easy to customize layouts, one-click
+            to import demo and much more.
+          </p>
+          <Button className="fw-semibold px-3 py-2 fs-5" variant="danger">
+            Learn More
+          </Button>
+        </div>
       </div>
     </div>
   );

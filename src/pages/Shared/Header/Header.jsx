@@ -14,7 +14,7 @@ const Header = () => {
         </p>
         <p>{moment().format("dddd, MMMM D, YYYY")}</p>
       </div>
-      <div className="d-flex gap-3 m-3">
+      <div className="d-flex gap-3 my-2 bg-light p-3">
         <Button variant="danger">Latest</Button>
         <Marquee speed={100}>
           I can be a React component, multiple React components, or just some
@@ -22,7 +22,7 @@ const Header = () => {
           just some text....
         </Marquee>
       </div>
-      <Navbar collapseOnSelect expand="lg" bg="light" variant="light">
+      <Navbar collapseOnSelect expand="lg" variant="light">
         <Container>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
