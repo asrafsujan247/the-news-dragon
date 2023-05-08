@@ -1,24 +1,29 @@
 import React from "react";
 import { Button, Card } from "react-bootstrap";
-import { useLoaderData } from "react-router-dom";
+import { FaArrowLeft } from "react-icons/fa";
+import { Link, useLoaderData } from "react-router-dom";
+import EditorsInsights from "../EditorsInsights/EditorsInsights";
 
 const News = () => {
   const news = useLoaderData();
+  const { _id, title, details, image_url, category_id } = news;
 
   return (
     <div>
-      <h2>News details coming soon..</h2>
-      <Card>
-        <Card.Img variant="top" src="holder.js/100px180" />
-        <Card.Body>
-          <Card.Title>Card Title</Card.Title>
-          <Card.Text>
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
-          </Card.Text>
-          <Button variant="primary">Go somewhere</Button>
+      <Card className="p-4">
+        <Card.Img variant="top" src={image_url} />
+        <Card.Body className="p-0 mt-3">
+          <Card.Title>{title}</Card.Title>
+          <Card.Text>{details}</Card.Text>
+          <Link to={`/category/${category_id}`}>
+            <Button variant="danger">
+              <FaArrowLeft className="mb-1 me-1"></FaArrowLeft> All news in this
+              category
+            </Button>
+          </Link>
         </Card.Body>
       </Card>
+      <EditorsInsights></EditorsInsights>
     </div>
   );
 };
