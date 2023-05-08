@@ -6,7 +6,7 @@ import Marquee from "react-fast-marquee";
 
 const Header = () => {
   return (
-    <Container>
+    <Container className="mt-4">
       <div className="text-center">
         <img src={logo} alt="" />
         <p className="text-secondary">
@@ -14,15 +14,15 @@ const Header = () => {
         </p>
         <p>{moment().format("dddd, MMMM D, YYYY")}</p>
       </div>
-      <div className="d-flex gap-3 my-2 bg-light p-3">
+      <div className="d-flex my-2 bg-light p-3">
         <Button variant="danger">Latest</Button>
-        <Marquee speed={100}>
+        <Marquee speed={100} gradient>
           I can be a React component, multiple React components, or just some
           text...... I can be a React component, multiple React components, or
           just some text....
         </Marquee>
       </div>
-      <Navbar collapseOnSelect expand="lg" variant="light">
+      <Navbar collapseOnSelect expand="lg" bg="white" variant="light">
         <Container>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">

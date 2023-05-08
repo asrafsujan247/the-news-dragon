@@ -13,7 +13,7 @@ import bg from "../../../assets/bg.png";
 const RightNav = () => {
   return (
     <div>
-      <h4>Login With</h4>
+      <h4 className="mt-4 mb-2">Login With</h4>
       <Button className="mb-2 w-100" variant="outline-primary">
         <FaGoogle /> Login with Google
       </Button>
@@ -21,7 +21,7 @@ const RightNav = () => {
         <FaGithub /> Login with Github
       </Button>
       <div>
-        <h4>Find Us On</h4>
+        <h4 className="mt-4 mb-2">Find Us On</h4>
         <ListGroup>
           <ListGroup.Item>
             <FaFacebook className="text-primary" /> Facebook
